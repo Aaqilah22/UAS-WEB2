@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Antrian</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #6a4ae5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result h1 {
+            font-size: 48px;
+            color: #6a4ae5;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button-group button {
+            background-color: #6a4ae5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <div class="container" v-if="showForm">
+        <h2>Form Antrian</h2>
+        <form @submit.prevent="submitForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" v-model="nama" id="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nomor_hp">Nomor HP</label>
+                <input type="text" v-model="nomor_hp" id="nomor_hp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="layanan">Layanan</label>
+                <select v-model="layanan" required>
+                    <option value="Teller">Teller</option>
+                    <option value="Customer Service">Customer Service</option>
+                    <option value="Priority Banking">Priority Banking</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nomor_antrian">Nomor Antrian</label>
+                <input type="text" v-model="nomor_antrian" id="nomor_antrian" readonly>
+            </div>
+
+            <button type="submit" :disabled="!isValid">Dapatkan Nomor Antrian</button>
+        </form>
+    </div>
+
+    <div class="container" v-if="!showForm">
+        <div class="result">
+            <h1>{{ nomor_antrian }}</h1>
+            <p>Harap menunggu di ruang tunggu</p>
+            <p>Layanan: {{ layanan }}</p>
+            <p>Nomor Antrian Anda</p>
+            <p><strong>Estimasi Tunggu: 15 menit</strong></p>
+            <div class="button-group">
+                <button @click="resetForm">Ambil Lagi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            showForm: true,
+            nama: '',
+            nomor_hp: '',
+            layanan: 'Teller',
+            nomor_antrian: '',
+            submitted: false
+        },
+        computed: {
+            isValid() {
+                // Validasi form: Pastikan semua field diisi
+                return this.nama && this.nomor_hp && this.layanan;
+            }
+        },
+        methods: {
+            // Fungsi untuk menghasilkan nomor antrian
+            generateNomorAntrian() {
+                const randomString = Math.random().toString(36).substr(2, 5).toUpperCase();
+                this.nomor_antrian = 'AN-' + randomString;
+            },
+            // Submit form
+            submitForm() {
+                this.generateNomorAntrian();  // Menghasilkan nomor antrian
+                this.showForm = false;        // Menyembunyikan form dan menampilkan hasil nomor antrian
+            },
+            // Reset form untuk input ulang
+            resetForm() {
+                this.showForm = true;
+                this.nomor_antrian = '';
+                this.nama = '';
+                this.nomor_hp = '';
+                this.layanan = 'Teller';
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

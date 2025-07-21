@@ -1,3 +1,4 @@
+# "Laporan Akhir UAS Pemograman Web2 Membuat Aplikasi Sistem Antrian Q-Bank"
 ### Anggota Kelompok:
 
 |NAMA|NIM|
@@ -6,6 +7,13 @@
 |LARAS SAKTI|312310627|
 |DITA AULIA|312310649 |
 |HANNIFA INDAH RAHAYU|312310653|
+
+# Tugas Membuat
+## Aplikasi Manajemen Antrian:
+- data antrian
+- data pelayanan
+- data loket
+- report
 
 # 📋Daftar Praktikum
 
@@ -45,4 +53,5 @@
 Aplikasi Q-Bank merupakan sistem antrian berbasis web yang dikembangkan menggunakan CodeIgniter 4, dirancang untuk mempermudah proses pengambilan nomor antrian oleh nasabah secara efisien dan terstruktur. Aplikasi ini mendukung peran pengguna (nasabah) dan admin/operator, serta dilengkapi dengan fitur-fitur seperti formulir antrian, penomoran otomatis, estimasi waktu tunggu, filter layanan, serta dashboard antrian.
 
 Aplikasi ini juga menyediakan REST API yang memungkinkan integrasi dengan sistem frontend modern (misalnya menggunakan AJAX atau Vue.js), serta mendukung kemudahan pengujian melalui alat seperti Postman.
+
 

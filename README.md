@@ -54,4 +54,36 @@ Aplikasi Q-Bank merupakan sistem antrian berbasis web yang dikembangkan mengguna
 
 Aplikasi ini juga menyediakan REST API yang memungkinkan integrasi dengan sistem frontend modern (misalnya menggunakan AJAX atau Vue.js), serta mendukung kemudahan pengujian melalui alat seperti Postman.
 
+# 🔧 Fitur-fitur Utama:
+
+## Login
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 08_8a19bb18](https://github.com/user-attachments/assets/bb30eed4-9d8d-44e8-8fe6-d44f40a2dcd8)
+
+## Dasboard
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 09_21b10e34](https://github.com/user-attachments/assets/56601c36-2856-4429-a83e-f93e99c68955)
+
+## Form Antrian 
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 07_924cfa99](https://github.com/user-attachments/assets/fcd19850-02b4-440d-8a84-d3a9f36988d1)
+
+## Nomor Antrian 
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 09_8496661b](https://github.com/user-attachments/assets/4d5da705-e07c-4ccd-804f-544e19077449)
+
+## Account
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 08_00bb5502](https://github.com/user-attachments/assets/ffde5085-1935-4c5b-8d5f-4a2738781e14)
+
+## Settings
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 08_8702ed62](https://github.com/user-attachments/assets/ceca0883-f8ac-4723-8fb6-870e97c1e4eb)
+
+## VueJS APP
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 07_8d263564](https://github.com/user-attachments/assets/cc43fbea-b7f2-4d47-8266-4026ed104307)
+
+![Gambar WhatsApp 2025-07-20 pukul 22 09 09_637b4a4a](https://github.com/user-attachments/assets/b8c822a2-8580-44f7-862d-a28e7aa79a30)
+
 
